@@ -1,0 +1,36 @@
+<section id="product-form">
+  <div class="container">
+    <form>
+      <h1>Novo produto</h1>
+
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" required 
+        minlength="2"
+        [(ngModel)]="product.name" 
+        #productName="ngModel" />
+        
+      <div class="error" *ngIf="productName.dirty && productName.errors?.required">
+        Campo obrigatório
+      </div>
+      <div class="error" *ngIf="productName.dirty && productName.errors?.minlength">
+        Tamanho inválido. Minimo 2 caracteres
+      </div>      
+      <br>
+
+      <label for="description">Descrição</label>
+      <input type="text" name="description" [(ngModel)]="product.description" />
+      <br>
+
+      <label for="price">Preço</label>
+      <input type="number" name="price" [(ngModel)]="product.price" />
+      <br>
+
+      <label for="url">URL da Imagem</label>
+      <input type="text" name="url" [(ngModel)]="product.url" />
+      <br>
+      
+      <button (click)="save()">Salvar</button>
+
+    </form>
+  </div>
+</section>

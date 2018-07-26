@@ -1,0 +1,10 @@
+<section id="products">
+  <div class="container">
+    <article *ngFor="let product of products">
+      <h1>{{product.name}}</h1>
+      <p>{{product.description}}</p>
+      <a [routerLink]="['/produtos', product.id]">+ Detalhes</a>
+      <!-- <a routerLink="/produtos/{{product.id}}">+ Detalhes</a> -->
+    </article>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+
+  #rodape {
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+  

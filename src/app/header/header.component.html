@@ -1,0 +1,16 @@
+<header id="cabecalho">
+  <div class="container">
+    
+    <div id="logo" onmouseover="late();"></div>
+    <h1>PET SHOP</h1>
+    <div class="clear"></div> <!-- servira como um divisor (clearfix) -->
+    <nav id="menu">
+      <a id="home" routerLink="/">home</a>
+      <a id="produtos" routerLink="/produtos">produtos</a>
+      <a id="galeria" *ngIf="userIsLogged" routerLink="/produtos/novo">novo produto</a>      
+      <a id="contato"  routerLink="/contato">contato</a>
+      <a id="contato" *ngIf="!userIsLogged" routerLink="/login">login</a>
+      <a id="contato" (click)="doLogout()" *ngIf="userIsLogged">logout</a>
+    </nav>
+  </div>
+</header>
